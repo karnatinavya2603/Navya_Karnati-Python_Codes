@@ -43,4 +43,35 @@ def file_read(a):
     return i
 print(file_read("Solutions.txt"))
 
+def count_lines(a):
+    try:
+        f = open(a,"r")
+        lines_count = 0 
+        for i in f:
+            lines_count+=1 
+        f.close()
+        return lines_count
+    except:
+        print("File Not error ")
+print(count_lines("Solutions.txt"))
+
+def count_words(a):
+    f = open(a,"r")
+    b = f.read()
+    words = b.split()
+    count = len(words)
+    f.close()
+    return count
+print(count_words("Solutions.txt")) 
+def count_char(a):
+    try:
+        f = open(a,"r")
+        b = f.read()
+        c = len(b)
+        f.close()
+        return c 
+    except:
+        print("File Not Found Error")
+print(count_char("Solutions.txt"))
+
     
