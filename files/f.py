@@ -74,4 +74,19 @@ def count_char(a):
         print("File Not Found Error")
 print(count_char("Solutions.txt"))
 
+def file_write():
+    file = open("data.txt", "w")
+    file.write("Hello from VS Code\n")
+    file.write("This file is saved on Desktop")
+    file.close()
+
+file_write()
+
+def file_append(a):
+    file = open(a,"a")
+    file.write("New thing is added")
+    file.close()
+    print("Appended successfully")
+file_append("data.txt")
+
     
